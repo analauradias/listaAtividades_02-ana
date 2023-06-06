@@ -1,0 +1,17 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
+    */
+    const numero = Number(prompt(`Insira um número inteiro`));
+    const divisao = numero/2;
+    const resto = divisao - Math.trunc(divisao);
+
+    if(resto == 0){
+        alert(`O número é par`);
+    }
+    else {
+        alert(`O número é ímpar`);
+    }
+    
+</script>
