@@ -8,6 +8,23 @@
     // Entre 6.9 e 6.0             D
     // Entre 5.9 e zero            E
 
-    
+    const nota = Number(prompt(`Insira a sua nota`).trim().replace(",","."));
+
+    if(nota >= 9){
+        alert(`conceito A`);
+    }
+    else if (nota >= 8){
+        alert(`conceito B`);
+    }
+    else if (nota >= 7){
+        alert(`conceito C`);
+    }
+    else if (nota >= 6){
+        alert(`conceito D`);
+    }
+    else{
+        alert(`conceito E`);
+    }
+
 
 </script>
