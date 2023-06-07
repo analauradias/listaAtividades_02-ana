@@ -12,11 +12,41 @@
     como "Assassino". Caso contrário, ele será classificado como "Inocente".
     */
 
-    const telefone = prompt (`Telefonou para a vítima? Responda com SIM ou NÃO`).toLowerCase().trim(); 
-    const local = prompt (`Esteve no local do crime? Responda com SIM ou NÃO`).toLowerCase().trim();
-    const morar = prompt (`Mora perto da vitima? Responda com SIM ou NÃO`).toLowerCase().trim();
-    const devia = prompt (`Devia para a vítima? Responda com SIM ou NÃO`).toLowerCase().trim();
-    const trabalho = prompt (`Já trabalhou com a vítima? Responda com SIM ou NÃO`).toLowerCase().trim();
+    const telefone = prompt(`Telefonou para a vítima? Responda com SIM ou NÃO`).toLowerCase().trim();
+    const local = prompt(`Esteve no local do crime? Responda com SIM ou NÃO`).toLowerCase().trim();
+    const morar = prompt(`Mora perto da vitima? Responda com SIM ou NÃO`).toLowerCase().trim();
+    const devia = prompt(`Devia para a vítima? Responda com SIM ou NÃO`).toLowerCase().trim();
+    const trabalho = prompt(`Já trabalhou com a vítima? Responda com SIM ou NÃO`).toLowerCase().trim();
+
+    let resposta = 0
+
+    if (telefone == "sim") {
+        resposta++; //está contando +1
+    }
+    if (local == "sim") {
+        resposta++;
+    }
+    if (morar == "sim") {
+        resposta++;
+    }
+    if (devia == "sim") {
+        resposta++;
+    }
+    if (trabalho == "sim") {
+        resposta++;
+    }
+    if (resposta == 2) {
+        alert(`Você é suspeito`);
+    }
+    if (resposta == 3 || resposta == 4) {
+        alert(`Você é cúmplice`);
+    }
+    if (resposta == 5) {
+        alert(`Você é o assassino`);
+    }
+    else {
+        alert(`Você é inocente`);
+    }
 
 
 </script>
