@@ -6,18 +6,28 @@
         //- até 1500(inclusive): aumento de 10 %
         //- acima de 1500: aumento de 5 %
     
-    const produto = Number(prompt(`Qual o valor do produto?`));
+    const produto = Number(prompt(`Qual o valor do produto?`).trim().replace(",","."));
     
     if(produto <= 280){
         const preco1 = ((produto*20)/100);
         const total1 = produto + preco1;
-        alert (`O valor do produto ficou ${total1}`);
+        alert (`O valor do produto ficou ${total1.toFixed(2).replace(".",",")}`);
     }
-     
-     else if (produto > 280 && produto == 700){
+     else if (produto <= 700){
         const preco2 = ((produto*15)/100);
         const total2 = produto+preco2;
-        alert (`O valor do produto ficou ${total2}`);
+        alert (`O valor do produto ficou ${total2.toFixed(2).replace(".",",")}`);
      
+    }
+    else if (produto <= 1500){
+        const preco3 = ((produto*10)/100);
+        const total3 = produto+preco3;
+        alert (`O valor do produto ficou ${total3.toFixed(2).replace(".",",")}`);
+     
+    }
+    else if(produto > 1500){
+        const preco4 = ((produto*5)/100);
+        const total4 = produto+preco4;
+        alert(`O valor do produto ficou ${total4.toFixed(2).replace(".",",")}`);
     }
 </script>
