@@ -4,9 +4,9 @@
     Faça um script que leia três números e mostre-os em ordem decrescente.
     */
 
-    const n1 = Number(prompt(`Informe um número:`));
-    const n2 = Number(prompt(`Informe outro número:`));
-    const n3 = Number(prompt(`Informe mais um número:`));
+    const n1 = Number(prompt(`Informe um número:`).trim());
+    const n2 = Number(prompt(`Informe outro número:`).trim());
+    const n3 = Number(prompt(`Informe mais um número:`).trim());
     
     if (n1 > n2 && n2 > n3) {
         alert(`${n1}, ${n2}, ${n3}`);

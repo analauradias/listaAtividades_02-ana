@@ -5,7 +5,21 @@
     // - cães de porte pequeno: fator 5
     // - cães de porte médio: fator 6
     // - cães grandes: fator 7.
+    const idade = Number(prompt(`Qual a idade do seu cão?`).trim());
+    const porte = prompt(`Qual o porte do seu cão? responda com GRANDE, MÉDIO ou PEQUENO`).trim().toLocaleLowerCase();
+    const pequeno = idade*5;
+    const medio = idade*6;
+    const grande = idade*7;
 
+    if(porte == "grande"){
+        alert(`a idade humana dele(a) é ${grande}`);
     
+    }
+    else if(porte == "medio"){
+        alert(`a idade humana dele(a) é ${medio}`);
+    }
+    else if(porte == "pequeno"){
+        alert(`a idade humana dele(a) é ${pequeno}`);
+    }
 
 </script>
