@@ -4,7 +4,14 @@
     Faça um script que peça um número e informe se o número é inteiro ou decimal.
     Dica: utilize uma função de arredondamento.
     */
-
-   
-
+    const number = Number(prompt(`Insira um número`).trim().replace(",","."));
+    
+    //O método Number.isInteger() determina se o valor passado é um inteiro
+    
+    if(Number.isInteger(number)){
+        alert(`É um número inteiro`);
+    }
+    else{
+        alert(`É um número decimal`);
+    }
 </script>
