@@ -15,6 +15,29 @@
     que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
     */
 
-    
+    const litros = Number(prompt(`Quantos litros foram vendidos?`).trim().replace(",","."));
+    const combustivel = prompt(`Qual o tipo do combustível? Responda com: G-gasolina ou A-álcool`).trim().toLowerCase();
+
+    const precoA3 = litros * (6,10 * 0.97);
+    const precoA5 = litros * (6,10 * 0.95);
+    const precoG4 = litros * (6,50 * 0.96);
+    const precoG6 = litros * (6,50 * 0.94);
+
+    if(combustivel == 'a'){
+        if(litros<=20){
+            alert(`${precoA3.toFixed(2).replace(".",",")}`);
+        }
+        else if(litros>20){
+            alert(`R$${precoA5.toFixed(2).replace(".",",")}`)
+        }
+    }
+    else if(combustivel == 'g'){
+        if(litros<=20){
+            alert(`${precoG4.toFixed(2).replace(".",",")}`);
+        }
+        else if(litros>20){
+            alert(`R$${precoG6.toFixed(2).replace(".",",")}`)
+        }
+    }
 
 </script>
