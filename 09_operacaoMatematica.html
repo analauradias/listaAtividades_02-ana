@@ -7,8 +7,35 @@
     - positivo ou negativo;
     - inteiro ou decimal.
     */
-
+    const number1 = Number(prompt(`Insira um número`).trim().replace(",","."));
+    const number2 = Number(prompt(`Insira mais um número`).trim().replace(",","."));
+    const operacao = prompt(`Qual operação você deseja realizar? Responda com A (ADIÇÃO), S (SUBTRAÇÃO), D (DIVISÃO) ou M (MULTIPLICAÇÃO)`).trim().toLocaleLowerCase();
     
-
-
+    if (operacao == "a"){
+        const adicao = number1+number2;
+        const ImparPar = (adicao % 2) == 0 ? 'par' : 'ímpar';
+        const sinal = Math.sign(adicao) == 1 ? 'positivo' : Math.sign(adicao) == -1 ? 'negativo' : 'zero';
+        alert(`Resultado: ${adicao.toFixed(2).replace(".",",")}, ${ImparPar}, Sinal: ${sinal}`)
+    }
+    else if(operacao == "s"){
+        const subtracao = number1-number2;
+        const ImparPar = (subtracao % 2) == 0 ? 'par' : 'ímpar';
+        const sinal = Math.sign(subtracao) == 1 ? 'positivo' : Math.sign(subtracao) == -1 ? 'negativo' : 'zero';
+        alert(`Resultado: ${subtracao.toFixed(2).replace(".",",")}, ${ImparPar}, Sinal: ${sinal}`)
+    }
+    else if(operacao == "d"){
+        const divisao = number1/number2;
+        const ImparPar = (divisao % 2) == 0 ? 'par' : 'ímpar';
+        const sinal = Math.sign(divisao) == 1 ? 'positivo' : Math.sign(divisao) == -1 ? 'negativo' : 'zero';
+        alert(`Resultado: ${divisao.toFixed(2).replace(".",",")}, ${ImparPar}, Sinal: ${sinal}`)
+    }
+    else if(operacao == "m"){
+        const multiplicacao = number1*number2;
+        const ImparPar = (multiplicacao % 2) == 0 ? 'par' : 'ímpar';
+        const sinal = Math.sign(multiplicacao) == 1 ? 'positivo' : Math.sign(multiplicacao) == -1 ? 'negativo' : 'zero';
+        alert(`Resultado: ${multiplicacao.toFixed(2).replace(".",",")}, ${ImparPar}, Sinal: ${sinal}`)
+    }
+    else{
+        alert(`Operação ou número inválido`);
+    }
 </script>
