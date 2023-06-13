@@ -5,7 +5,7 @@
     */
     const numero = Number(prompt(`Insira um número inteiro`));
     const divisao = numero/2;
-    const resto = divisao - Math.trunc(divisao);
+    const resto = divisao - Math.floor(divisao);
 
     if(resto == 0){
         alert(`O número é par`);
