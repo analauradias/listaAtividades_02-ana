@@ -5,6 +5,15 @@
     // seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o
     // ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
 
-    
+    const antes = Number(prompt(`Qual foi sua nota antes de receber ajuda?`).trim().replace(",","."));
+    const depois = Number(prompt(`Qual a sua nota depois de receber a ajuda`).trim().replace(",","."));
+    const aumento = (depois-antes)*1/4;
+
+    if(aumento>0){
+        alert(`O big Brother terá ${aumento.toFixed(2).replace(".",",")} de aumento de nota`);
+    }
+    else{
+        alert(`O Big Brother não terá um aumento de notas`);
+    }
 
 </script>
